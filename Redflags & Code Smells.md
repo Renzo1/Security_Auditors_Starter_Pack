@@ -3,7 +3,7 @@
 ## Terms to Immediate Search in Every Contract
 
 - *tx.origin*
-- *ecrover*
+- *ecrecover*
 - *selfdestruct*
 - *delegatecall*
 - *callcode*
