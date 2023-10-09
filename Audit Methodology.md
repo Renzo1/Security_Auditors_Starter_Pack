@@ -33,7 +33,7 @@ Go into the Project Community and see what the trending topics are:
 
 ### High-level Business Logic Simulation (Optional)
 
-- Validate the Business logic by simulating the using Machinations.
+- Validate the Business logic by simulating it with Machinations.
 - Recommended for complex systems and when they is ample time for the audit.
 
 &nbsp;
