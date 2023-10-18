@@ -61,6 +61,7 @@ Spot any problem areas needing attention before the in-depth review begins.
 ### Source Code Analysis (Pt II)
 
 - Walk through each of the high level goals in the code and walk the code path and try to understand from a high level exactly how this goal is achieved
+- Map out the every code path for each functions -- [Each code path should have its own unit test.](https://book.getfoundry.sh/tutorials/best-practices#best-practices-1)
 - Build a list of [invariants](:/f6bc6ae3247741d78105c4bebd925dc4) and other things that would be very harmful for the protocol if they broke
 - Analyze the code's structure, modules, dependencies, and coding style.
 - Check code comments and documentation for clarity, correctness, and completeness.
@@ -157,6 +158,7 @@ If you have a complex utility function with low-level assembly, consider writing
 - Utilize threat model Include adversarial tests
     
 - Take advantage of @audit notes (knobs) written in earlier steps
+- Always reference [Foundry Best Practices](https://book.getfoundry.sh/tutorials/best-practices.html)
     
 
 &nbsp;
