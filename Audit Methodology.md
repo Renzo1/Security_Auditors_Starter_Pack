@@ -1,8 +1,15 @@
 # My Methodology
 
-> Sourcegraph: Search with the relevant keywords to find if the potentially to-be-audited repository is already public
+> *Sourcegraph: Search with the relevant keywords to find if the potentially to-be-audited repository is already public*
 
-> Terminal SetUp for Testing: Chisel terminal; Anvil terminal; Command terminal
+> *Terminal SetUp for Testing: Chisel terminal; Anvil terminal; Command terminal*
+
+>*Time Planning
+Step 1: 5% (Prepare before start date to make this faster)
+Step 2: 10% 
+Step 3: 40%
+Step 4 & 5: 40%
+Step 6 & 7: 5%*
 
 ## Step 1: Deep Dive
 
@@ -47,23 +54,19 @@ Spot any problem areas needing attention before the in-depth review begins.
 - Construct a mental model of what you expect the contracts to look like before checking out the code (if possible).
 - Glance over the contracts to get a sense of the project's architecture. Tools like Surya can come in handy.
 - Compare the architecture to your mental model. Look into areas that are surprising.
-- Create a threat model and make a list of theoretical high level attack vectors.
+- Create a [Threat Model](:/8aa5bfd775dd400faf44f7a76c71488c) and make a list of theoretical high level attack vectors.
 - Look at areas that can do value exchange. Especially functions like `transfer`, `transferFrom`, `send`, `call`, `delegatecall`, and `selfdestruct`. Walk backward from them to ensure they are secured properly.
-- Look at areas that interface with external contracts and ensure all assumptions about them are valid like share price only increases, etc.
+- Look at areas that interface with external contracts and ensure all assumptions about them are valid like share price only increases, address can receive ether etc.
 
 ### Source Code Analysis (Pt II)
 
 - Walk through each of the high level goals in the code and walk the code path and try to understand from a high level exactly how this goal is achieved
-- Build a list of invariants and other things that would be very harmful for the protocol if they broke
+- Build a list of [invariants](:/f6bc6ae3247741d78105c4bebd925dc4) and other things that would be very harmful for the protocol if they broke
 - Analyze the code's structure, modules, dependencies, and coding style.
-- Check code comments and documentation for clarity and completeness.
+- Check code comments and documentation for clarity, correctness, and completeness.
 - Evaluate the development environment for any potential compilation problems, executes the provided tests, and verifies both the functional and non-functional requirements.
 - Run the codebase against [Red-flag Alerts](:/82edb44b30014512a4480d2bed42e8b1)
 - Leave @audit tags above and beside suspicious code sections (knobs)
-
-#### Add to Question List
-
-[Audit Question Formulation Strategies](:/ba40642685f5488bb9454487eb9034fa)
 
 #### Add to Question List
 
@@ -92,13 +95,13 @@ An exhaustive line-by-line review meticulously examining each segment of the cod
     - Identify potential system-halting DoS attacks.
     - Review from the perspective of every actor in the threat model.
     - Review the code with these \[approaches\]([Manual review approaches](:/517d5fa541bc4c76bd7fc8df2a7f4992))
-- Glance over the project's tests + code coverage and look deeper at areas lacking coverage.
+- Glance over the project's tests + code coverage and look deeper at areas lacking coverage. (handy tools: [Coverage Gutters](:/7b96bf7c6d0c4cb59b3881e5916389d5), Foundry)
 - Run Automated tools like Slither/Solhint and review their output.
 
 ### Smart Contract Audit Tools *(add links to the tools folders, containing tutorials, in joplin)*
 
 These are testing and formal verification tools used to automate part of the auditing process.
-
+- **Halmos**: Halmos is a symbolic testing tool for EVM smart contracts.
 - **Securify2**: Securify 2.0 is a security scanner for Ethereum smart contracts supported by the Ethereum Foundation and ChainSecurity.
 - **Mythx** (paid): A security analysis platform for Solidity smart contracts, combining static and dynamic analysis to detect vulnerabilities and generate detailed reports.
 - **Slither**: This static analysis tool examines Solidity source code for security vulnerabilities and checks compliance with best practices.
@@ -106,6 +109,7 @@ These are testing and formal verification tools used to automate part of the aud
 - **4naly3er**: 4naly3er stands as a pivotal static analysis tool deployed in the auditing of smart contracts, particularly prevalent in the Code4rena platform for automated smart contract auditing.
 - **Semgrep**: is a fast, open source static analysis tool for finding bugs, detecting vulnerabilities in third-party dependencies, and enforcing code standards.
 - **Codex**: Use [codex](https://openai.com/blog/openai-codex/) to find vulnerabilities
+
 
 #### Special Case:
 
@@ -127,15 +131,24 @@ Answer all the question on the question list.
 
 &nbsp;
 
-## Step 4: Fuzz Testing
+## Step 4: Testing
+If you have a complex utility function with low-level assembly, consider writing a foundry fuzz test (Differential Testing) to compare it with a widely-used utility function or use SMTChecker like Halmos for formal verification.
+[📙Audit Testing With Foundry](:/bb99225262074d0e9782d0f48eda7e15)
+- Unit Tests
+- Integration Tests
+- Forked Tests
+- Fuzz Testing
+	- Stateless Fuzzing
+	- Stateful Fuzzing
+		- Open Testing
+		- Continue On Revert Testing
+		- Fail On revert Testing
+		- Differential Testing 
 
-- Foundary Unit Tests and Fuzz Testing: [📙Audit Testing With Foundry](:/bb99225262074d0e9782d0f48eda7e15)
-- Include adversarial tests
+- What are some edge cases for the tested function
+- Utilize threat model Include adversarial tests
 - Take advantage of @audit notes (knobs) written in earlier steps
-- Terminal SetUp for Testing:
-    - Chisel terminal: testing code lines.
-    - Anvil terminal: For running local networks
-    - Command terminal: Contract interactions
+
 
 &nbsp;
 
