@@ -84,7 +84,7 @@ Spot any problem areas needing attention before the in-depth review begins.
 
 ## Step 3: Line-By-Line Review
 
-Let the audit begin!\\
+Let the audit begin!\
 
 ### Find & document issues
 
