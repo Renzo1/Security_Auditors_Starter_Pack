@@ -4,12 +4,12 @@
 
 > *Terminal SetUp for Testing: Chisel terminal; Anvil terminal; Command terminal*
 
->*Time Planning
-Step 1: 5% (Prepare before start date to make this faster)
-Step 2: 10% 
-Step 3: 40%
-Step 4 & 5: 40%
-Step 6 & 7: 5%*
+> *Time Planning  
+> Step 1: 5% (Prepare before start date to make this faster)  
+> Step 2: 10%  
+> Step 3: 40%  
+> Step 4 & 5: 40%  
+> Step 6 & 7: 5%*
 
 ## Step 1: Deep Dive
 
@@ -101,19 +101,21 @@ An exhaustive line-by-line review meticulously examining each segment of the cod
 ### Smart Contract Audit Tools *(add links to the tools folders, containing tutorials, in joplin)*
 
 These are testing and formal verification tools used to automate part of the auditing process.
-- **Halmos**: Halmos is a symbolic testing tool for EVM smart contracts.
-- **Securify2**: Securify 2.0 is a security scanner for Ethereum smart contracts supported by the Ethereum Foundation and ChainSecurity.
-- **Mythx** (paid): A security analysis platform for Solidity smart contracts, combining static and dynamic analysis to detect vulnerabilities and generate detailed reports.
-- **Slither**: This static analysis tool examines Solidity source code for security vulnerabilities and checks compliance with best practices.
-- **Mythril**: A bug-hunting framework that helps to identify potential vulnerabilities in Solidity smart contracts.
-- **4naly3er**: 4naly3er stands as a pivotal static analysis tool deployed in the auditing of smart contracts, particularly prevalent in the Code4rena platform for automated smart contract auditing.
-- **Semgrep**: is a fast, open source static analysis tool for finding bugs, detecting vulnerabilities in third-party dependencies, and enforcing code standards.
-- **Codex**: Use [codex](https://openai.com/blog/openai-codex/) to find vulnerabilities
 
+| Tool | Tool Type | Description | When to Use | How to Use |
+| --- | --- | --- | --- | --- |
+| Halmos | \-  | Halmos is a symbolic testing tool for EVM smart contracts. | \-  | \-  |
+| Securify2.0 |     | is a security scanner for Ethereum smart contracts supported by the Ethereum Foundation and ChainSecurity. |     |     |
+| **Mythx** (paid) |     | A security analysis platform for Solidity smart contracts, combining static and dynamic analysis to detect vulnerabilities and generate detailed reports. |     |     |
+| Slither | [Static Analyzers](https://book.getfoundry.sh/config/static-analyzers#static-analyzers) | This static analysis tool examines Solidity source code for security vulnerabilities and checks compliance with best practices. Can be integrated with Foundry |     |     |
+| Mythril | [Static Analyzers](https://book.getfoundry.sh/config/static-analyzers#static-analyzers) | A bug-hunting framework that helps to identify potential vulnerabilities in Solidity smart contracts. |     |     |
+| 4naly3er | Static Analyzers | stands as a pivotal static analysis tool deployed in the auditing of smart contracts, particularly prevalent in the Code4rena platform for automated smart contract auditing. |     |     |
+| Semgrep |     | is a fast, open source static analysis tool for finding bugs, detecting vulnerabilities in third-party dependencies, and enforcing code standards. |     |     |
+| Codex |     | Use [codex](https://openai.com/blog/openai-codex/) to find vulnerabilities |     |     |
+| ### Special Case: |     |     |     |     |
+| Diffusc |     | uses differential fuzzing to simplify the process of reviewing smart contract upgrades. It’s hardly a tool for day-to-day operations but may prove useful when comparing two smart contract implementations. |     |     |
 
-#### Special Case:
-
-- **Diffusc**: uses differential fuzzing to simplify the process of reviewing smart contract upgrades. It’s hardly a tool for day-to-day operations but may prove useful when comparing two smart contract implementations.
+&nbsp;
 
 ### Comparative Analysis and Industry Standards:
 
@@ -132,23 +134,30 @@ Answer all the question on the question list.
 &nbsp;
 
 ## Step 4: Testing
-If you have a complex utility function with low-level assembly, consider writing a foundry fuzz test (Differential Testing) to compare it with a widely-used utility function or use SMTChecker like Halmos for formal verification.
+
+If you have a complex utility function with low-level assembly, consider writing a foundry fuzz test (Differential Testing) to compare it with a widely-used utility function or use SMTChecker like Halmos for formal verification.  
 [📙Audit Testing With Foundry](:/bb99225262074d0e9782d0f48eda7e15)
+
 - Unit Tests
+    
 - Integration Tests
+    
 - Forked Tests
+    
 - Fuzz Testing
-	- Stateless Fuzzing
-	- Stateful Fuzzing
-		- Open Testing
-		- Continue On Revert Testing
-		- Fail On revert Testing
-		- Differential Testing 
-
+    
+    - Stateless Fuzzing
+    - Stateful Fuzzing
+        - Open Testing
+        - Continue On Revert Testing
+        - Fail On revert Testing
+        - Differential Testing
 - What are some edge cases for the tested function
+    
 - Utilize threat model Include adversarial tests
+    
 - Take advantage of @audit notes (knobs) written in earlier steps
-
+    
 
 &nbsp;
 
