@@ -25,12 +25,12 @@
 
 ### Stakeholder Analysis
 
-[Stakeholder Analysis Template](:/033bafdfec9c460ab7b2519787b5a564)  
+[Stakeholder Analysis Template](joplin://033bafdfec9c460ab7b2519787b5a564)  
 Stakeholder analysis involves identifying and assessing the parties with vested interests to understand their concerns and risks, ensuring the audit meets their needs.
 
 #### Build a List of Initial Questions
 
-[Audit Question Formulation Strategies](:/ba40642685f5488bb9454487eb9034fa)
+[Audit Question Formulation Strategies](joplin://ba40642685f5488bb9454487eb9034fa)
 
 ### Ecosystem System Analysis
 
@@ -54,7 +54,7 @@ Spot any problem areas needing attention before the in-depth review begins.
 - Construct a mental model of what you expect the contracts to look like before checking out the code (if possible).
 - Glance over the contracts to get a sense of the project's architecture. Tools like Surya can come in handy.
 - Compare the architecture to your mental model. Look into areas that are surprising.
-- Create a [Threat Model](:/8aa5bfd775dd400faf44f7a76c71488c) and make a list of theoretical high level attack vectors.
+- Create a [Threat Model](joplin://8aa5bfd775dd400faf44f7a76c71488c) and make a list of theoretical high level attack vectors.
 - Look at areas that can do value exchange. Especially functions like `transfer`, `transferFrom`, `send`, `call`, `delegatecall`, and `selfdestruct`. Walk backward from them to ensure they are secured properly.
 - Look at areas that interface with external contracts and ensure all assumptions about them are valid like share price only increases, address can receive ether etc.
 
@@ -62,16 +62,16 @@ Spot any problem areas needing attention before the in-depth review begins.
 
 - Walk through each of the high level goals in the code and walk the code path and try to understand from a high level exactly how this goal is achieved
 - Map out the every code path for each functions -- [Each code path should have its own unit test.](https://book.getfoundry.sh/tutorials/best-practices#best-practices-1)
-- Build a list of [invariants](:/f6bc6ae3247741d78105c4bebd925dc4) and other things that would be very harmful for the protocol if they broke
+- Build a list of [invariants](joplin://f6bc6ae3247741d78105c4bebd925dc4) and other things that would be very harmful for the protocol if they broke
 - Analyze the code's structure, modules, dependencies, and coding style.
 - Check code comments and documentation for clarity, correctness, and completeness.
 - Evaluate the development environment for any potential compilation problems, executes the provided tests, and verifies both the functional and non-functional requirements.
-- Run the codebase against [Red-flag Alerts](:/82edb44b30014512a4480d2bed42e8b1)
+- Run the codebase against [Red-flag Alerts](joplin://82edb44b30014512a4480d2bed42e8b1)
 - Leave @audit tags above and beside suspicious code sections (knobs)
 
 #### Add to Question List
 
-[Audit Question Formulation Strategies](:/ba40642685f5488bb9454487eb9034fa)
+[Audit Question Formulation Strategies](joplin://ba40642685f5488bb9454487eb9034fa)
 
 ### Visual Tools
 
@@ -89,14 +89,14 @@ Let the audit begin!
 
 ### Find & document issues
 
-An exhaustive line-by-line review meticulously examining each segment of the code for all possible vulnerabilities, including:Issues outlined in the SWC registry, Data manipulations, Access violations, Flash loans, Complex vulnerabilities emerging from contracts interactions. See [Security Pitfalls Checklists](:/0655cc538dd54e44b6aa17bd207dbf31)
+An exhaustive line-by-line review meticulously examining each segment of the code for all possible vulnerabilities, including:Issues outlined in the SWC registry, Data manipulations, Access violations, Flash loans, Complex vulnerabilities emerging from contracts interactions. See [Security Pitfalls Checklists](joplin://0655cc538dd54e44b6aa17bd207dbf31)
 
 - Conduct reviews from various perspectives including:
     - Follow the money flow.
     - Identify potential system-halting DoS attacks.
     - Review from the perspective of every actor in the threat model.
-    - Review the code with these \[approaches\]([Manual review approaches](:/517d5fa541bc4c76bd7fc8df2a7f4992))
-- Glance over the project's tests + code coverage and look deeper at areas lacking coverage. (handy tools: [Coverage Gutters](:/7b96bf7c6d0c4cb59b3881e5916389d5), Foundry)
+    - Review the code with these [approaches]([Manual review approaches](joplin://517d5fa541bc4c76bd7fc8df2a7f4992))
+- Glance over the project's tests + code coverage and look deeper at areas lacking coverage. (handy tools: [Coverage Gutters](joplin://7b96bf7c6d0c4cb59b3881e5916389d5), Foundry)
 - Run Automated tools like Slither/Solhint and review their output.
 
 ### Smart Contract Audit Tools *(add links to the tools folders, containing tutorials, in joplin)*
@@ -105,7 +105,7 @@ These are testing and formal verification tools used to automate part of the aud
 
 | Tool | Tool Type | Description | When to Use | How to Use |
 | --- | --- | --- | --- | --- |
-| Halmos | \-  | Halmos is a symbolic testing tool for EVM smart contracts. | \-  | \-  |
+| Halmos | -   | Halmos is a symbolic testing tool for EVM smart contracts. | -   | -   |
 | Securify2.0 |     | is a security scanner for Ethereum smart contracts supported by the Ethereum Foundation and ChainSecurity. |     |     |
 | **Mythx** (paid) |     | A security analysis platform for Solidity smart contracts, combining static and dynamic analysis to detect vulnerabilities and generate detailed reports. |     |     |
 | Slither | [Static Analyzers](https://book.getfoundry.sh/config/static-analyzers#static-analyzers) | This static analysis tool examines Solidity source code for security vulnerabilities and checks compliance with best practices. Can be integrated with Foundry |     |     |
@@ -137,13 +137,13 @@ Answer all the question on the question list.
 ## Step 4: Testing
 
 If you have a complex utility function with low-level assembly, consider writing a foundry fuzz test (Differential Testing) to compare it with a widely-used utility function or use SMTChecker like Halmos for formal verification.  
-[📙Audit Testing With Foundry](:/bb99225262074d0e9782d0f48eda7e15)
+[📙Audit Testing With Foundry](joplin://bb99225262074d0e9782d0f48eda7e15)
 
-- Unit Tests
+- [Unit Tests](https://book.getfoundry.sh/tutorials/best-practices#best-practices-1)
     
-- Integration Tests
+- [Integration Tests](https://book.getfoundry.sh/tutorials/best-practices#best-practices-1)
     
-- Forked Tests
+- [Forked Tests](https://book.getfoundry.sh/tutorials/best-practices#best-practices-1)
     
 - Fuzz Testing
     
@@ -158,6 +158,7 @@ If you have a complex utility function with low-level assembly, consider writing
 - Utilize threat model Include adversarial tests
     
 - Take advantage of @audit notes (knobs) written in earlier steps
+    
 - Always reference [Foundry Best Practices](https://book.getfoundry.sh/tutorials/best-practices.html)
     
 
