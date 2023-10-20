@@ -131,7 +131,7 @@ Passing the above tests implies that the vulnerability:
 - Withdraws ____.
 - ...
 
-**Exploit Scenario**
+###Exploit Scenario
 John deposits $1000, and then blah, blah, blah...
 
 &nbsp;
