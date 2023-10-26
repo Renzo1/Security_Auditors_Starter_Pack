@@ -15,8 +15,8 @@
 
 ### Understand Project Goals:
 
-- Read the project's whitepaper and documentation to understand the smart contract's intended purpose and functionality.
-- List out the high level goals of the system (Use this for the [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648))
+- Read the project's whitepaper and documentation to understand the smart contract's intended purpose and functionality. [Audit Wizard](:/3aa7779055514e35844bad85e30a026f) comes in handy.
+- List out the high level goals of the system (Use this for the [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648)). [ChatGPT](:/39c3f0a27119488e8e8874a4f2f23eb0) comes in handy
 - Engage with the development team or stakeholders to clarify objectives and functionalities.
 - Diagrams the system - External API, State transition, Flow of funds
 - Study the underlying network for the protocol
@@ -25,16 +25,18 @@
 
 ### Stakeholder Analysis:
 
-- This has been incorporated into the  [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648). 
+- This has been incorporated into the  [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648).
 - However, you can check [Stakeholder Analysis Template](:/033bafdfec9c460ab7b2519787b5a564) for the detailed version
 
 #### Build a List of Initial Questions:
 
-- This has been incorporated into the  [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648). 
+- This has been incorporated into the  [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648).
 - Check out [Audit Question Formulation Strategies](:/ba40642685f5488bb9454487eb9034fa)
 
 ### Ecosystem System Analysis
+
 Go into the Project Community and see what the trending topics are:
+
 - You might find a unique issue from what the community is still discussing or divided on.
 
 ### High-level Business Logic Simulation (Optional)
@@ -44,8 +46,9 @@ Go into the Project Community and see what the trending topics are:
 
 &nbsp;
 
-## Step 2: Run Automated Tools 
-> *Todo: add links to the tools folders, containing tutorials, in joplin*
+## Step 2: Run Automated Tools
+
+> *Todo: add links to the tools folders containing tutorials in Joplin*
 
 The goal here is to find all the low hanging fruits, and get them out of the way early.
 
@@ -65,9 +68,11 @@ The goal here is to find all the low hanging fruits, and get them out of the way
 &nbsp;
 
 ## Step 3: Initial Code Review:
-Spot any problem areas needing attention before the in-depth review begins. Check out [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648). 
- 
+
+Spot any problem areas needing attention before the in-depth review begins. Check out [Miro template](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=281957613648).
+
 ### Source Code Analysis (Pt I)
+
 - Construct a mental model of what you expect the contracts to look like before checking out the code (if possible).
 - Glance over the contracts to get a sense of the project's architecture. Tools like Surya can come in handy.
 - Compare the architecture to your mental model. Look into areas that are surprising.
@@ -106,7 +111,7 @@ Let the audit begin!
 
 ### Find & document issues
 
-An exhaustive line-by-line review meticulously examining each segment of the code for all possible vulnerabilities, including:Issues outlined in the SWC registry, Data manipulations, Access violations, Flash loans, Complex vulnerabilities emerging from contracts interactions. See [Security Pitfalls Checklists](:/0655cc538dd54e44b6aa17bd207dbf31)
+An exhaustive line-by-line review meticulously examining each segment of the code for all possible vulnerabilities, including: Issues outlined in the SWC registry, Data manipulations, Access violations, Flash loans, Complex vulnerabilities emerging from contracts interactions. See [Security Pitfalls Checklists](:/0655cc538dd54e44b6aa17bd207dbf31)
 
 - Conduct reviews from various perspectives including:
     - Follow the money flow.
