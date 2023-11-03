@@ -1,6 +1,8 @@
 # Red-flag Alerts - Terms & Set-ups to Immediate Search in Every Contract
 
-## Terms to Immediate Search in Every Contract
+`To do: Scroll through Security pitfalls and update this list`
+
+## Terms to Immediately Search in Every Contract
 
 - *tx.origin*
 - *ecrecover*
@@ -16,7 +18,12 @@
 - *delete*
 - *external*
 - *public*
+- *gasleft*
+- *blockhash*
 - *extcodesize*
+- *abi.encodePacked*
+- *abi.encode*
+- *constant*
 - *true (boolean constants)*
 - *false (boolean constants)*
 - *for (Calls inside a loop; Modifying an array of unknown size)*
@@ -43,15 +50,17 @@
 - *ERC20 (ERC20 decimals returns a uint8)*
 - *ERC777*
 - *ERC1400*
-- Owner
-- mapping
-- permit
-- some\_collisio
-- EIP-2612
+- *Owner*
+- *mapping*
+- *permit*
+- *some\_collision*
+- *EIP-2612*
 - *DOMAIN\_SEPARATOR*
 - *event*
 - *using*
 - *this*
+- */ (division sign)* : divide by zero case or precision loss (round down to zero -- when numerator is significantly smaller the denominator)
+- *create2*
 
 &nbsp;
 
@@ -59,7 +68,17 @@
 
 - Analyze non-overridden functions of inherited
     
+- Not using(inheriting) an upgradable variant of an Openzeppelin contract in an upgrable smart contract
+    
+- Catch block actually catch return value -- catch (bytes memory returnData) {} (ref: https://youtu.be/DRZogmD647U?t=5380)
+    
+- No Input Validation in function
+    
+- Named import syntax not used
+    
 - Solidity version less than 0.8.0
+    
+- Calling a public or external function from within another function
     
 - Exposing initialization functions: wrongly naming a function intended to be a constructor, the constructor code ends up in the runtime byte code and can be called by anyone to re-initialize the contract.
     
@@ -69,7 +88,7 @@
     
 - Reused base constructors
     
-- Examine every external calls for reentrancies
+- Examine every external calls for re-entrancies
     
 - Check if external calls can DoS by reverting or spending a lot of gas
     
@@ -127,13 +146,9 @@
     
 - Typos
     
-- Divisions that can potential round down to zero
-    
 - Rounding errors
     
 - A \`Multicall\` function that works with \`address(this).delegatecall()\` and using \`msg.value\`. In a "delegatecall" the \`msg.value\` is reused, hence it can be used for a double-spend exploit
-    
-
     
 
 &nbsp;
@@ -155,6 +170,6 @@
 - Implicit requirements and assumptions should be flagged as dangerous.
 - Incorrect usage of using-for statement
 - What if I call with an empty list? With a really big number? With a really small number (1 wei)? With identical addresses?
-
+- Stepwise jumps: [Frontrunning](https://youtu.be/DRZogmD647U?t=15261)
 
 Token Attack
