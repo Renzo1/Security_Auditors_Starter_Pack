@@ -1,8 +1,8 @@
-# Red-flag Alerts - Terms & Set-ups to Immediate Search in Every Contract
+# Red-flag Alerts - Terms & Set-ups to Immediately Search in Every Contract
 
 `To do: Scroll through Security pitfalls and update this list`
 
-## Terms to Immediately Search in Every Contract
+## Terms to Immediate Search in Every Contract
 
 - *tx.origin*
 - *ecrecover*
@@ -67,6 +67,8 @@
 ## *Code Smells & Attack Vectors to look out for*
 
 - Analyze non-overridden functions of inherited
+
+- Contract guardrails (protection mechanisms) not being set during construction (in the constructor).
     
 - Not using(inheriting) an upgradable variant of an Openzeppelin contract in an upgrable smart contract
     
