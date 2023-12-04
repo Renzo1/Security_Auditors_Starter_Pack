@@ -40,4 +40,5 @@ We welcome your support to further develop this repository. Ways to contribute i
 
 ## Future Targets
 
-Our future goal is to transform the "Redflags & Code Smells.md" into a static analyzer. To achieve this, we are focused on collecting and aggregating as many "redflags" and "code smells" and "vulnerabilities" as possible.
+Our future goal is to transform the "Redflags & Code Smells.md" into a static analyzer. To achieve this, we are focused on collecting and aggregating as many "redflags" and "code smells" and "vulnerabilities" as possible. 
+> [Version 0.1.0](https://github.com/Renzo1/RenZo_Scanner) is out now. Spoiler alert: It's pretty basic at the moment ;)
