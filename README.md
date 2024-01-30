@@ -1,5 +1,6 @@
 # Security_Auditors_Starter_Pack
 - [Miro board](https://miro.com/app/board/uXjVMgF6YT4=/?share_link_id=15940391732)
+- [Whimsical board](https://whimsical.com/public-home-RCh9khB7SdtPeBczNF5DjS)
 - [Google Sheet Model](https://docs.google.com/spreadsheets/d/1LoUfjXRslmXcaoZVNV3Ya1btsAshg5V3ZkymYcunZPs/edit?usp=sharing)
 - [Twitter List](https://‪https://x.com/i/lists/1699739698728407461)
 
