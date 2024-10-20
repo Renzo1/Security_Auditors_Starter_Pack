@@ -43,3 +43,13 @@ We welcome your support to further develop this repository. Ways to contribute i
 
 Our future goal is to transform the "Redflags & Code Smells.md" into a static analyzer. To achieve this, we are focused on collecting and aggregating as many "redflags" and "code smells" and "vulnerabilities" as possible. 
 > [Version 0.1.0](https://github.com/Renzo1/RenZo_Scanner) is out now. Spoiler alert: It's pretty basic at the moment ;)
+
+
+# Related Research and Projects
+## Philosophy of Fuzzing
+### Part I: [Efficacy of Fuzzing](https://docs.google.com/spreadsheets/d/1gz9Z_dkBDHbKTVEWHEIwv6JrvRiIvkmCUDyCz4Laec8/edit?usp=sharing)
+- Check this the Digest sheet for a special offer
+
+### Part II: Crafting Effective Invariants (In-progress)
+
+### Part III: 
