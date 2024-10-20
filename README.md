@@ -48,7 +48,7 @@ Our future goal is to transform the "Redflags & Code Smells.md" into a static an
 # Related Research and Projects
 ## Philosophy of Fuzzing
 ### Part I: [Efficacy of Fuzzing](https://docs.google.com/spreadsheets/d/1gz9Z_dkBDHbKTVEWHEIwv6JrvRiIvkmCUDyCz4Laec8/edit?usp=sharing)
-- Check this the Digest sheet for a special offer
+- Check the "Digest" sheet for a special offer
 
 ### Part II: Crafting Effective Invariants (In-progress)
 
